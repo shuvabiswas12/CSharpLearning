@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,42 @@ namespace CSharpLearning
             this.GetJaggedArray();
             this.RectangularArray();
             this.SomeArrayMethod();
+            this.CreateList();
+            this.CreateArrayList();
+        }
+
+        // List
+        void CreateList()
+        {
+            var list = new List<int>();
+            list.Add(10);
+            list.AddRange(new int[3] { 3, 5, 7 });
+
+            Console.WriteLine("List: ");
+            // iteration a list
+            foreach(var item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        void CreateArrayList()
+        {
+            var arrayList = new ArrayList();
+            arrayList.Add(100);
+            arrayList.Add("Sumon");
+            arrayList.AddRange(new float[] { 2.6f, 7.8f, 1.9f });
+            arrayList.Add(200);
+
+            // length
+            Console.WriteLine(@"Length : {0}", arrayList.Count);
+
+            Console.WriteLine("Array List: ");
+
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         void GetJaggedArray()
