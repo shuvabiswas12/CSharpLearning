@@ -19,6 +19,7 @@ namespace CSharpLearning
             GetCurrentTime();
             GetCurrentTimespan();
             GetTimespan();
+            GetCurrentTimestamp();
         }
 
         static void YesterdaysDate()
@@ -83,6 +84,28 @@ namespace CSharpLearning
         static void GetTimespan()
         {
             Console.WriteLine(TimeSpan.FromHours(7));
+        }
+
+        static void GetCurrentTimestamp()
+        {
+            var now = new DateTime(2022, 5, 8);
+            Console.WriteLine(now);
+            var timestamp = DateTime.Now.ToString("yyyyMMddHHmmssffff");
+            Console.WriteLine(@"Timestamp: {0}", timestamp);
+
+            // this is preferable
+            var timestamp_v2 = new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
+            Console.WriteLine(@"Timestamp: {0}", timestamp_v2);
+
+            // finding date time from a timestamp value
+            GetDateTimeFromTimestamp(timestamp_v2);
+        }
+
+        static void GetDateTimeFromTimestamp(long timestamp)
+        {
+            var dateTime = DateTimeOffset.FromUnixTimeSeconds(timestamp).DateTime;
+            // I am converting utc time to local banngladesh time adding 6.0 hours extra
+            Console.WriteLine(@"Datetime from timestamp: {0}", dateTime.AddHours(6.0));
         }
     }
 }
