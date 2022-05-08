@@ -104,7 +104,7 @@ namespace CSharpLearning
         static void GetDateTimeFromTimestamp(long timestamp)
         {
             var dateTime = DateTimeOffset.FromUnixTimeSeconds(timestamp).DateTime;
-            // I am converting utc time to local banngladesh time adding 6.0 hours extra
+            // I am converting utc time to local bangladesh time adding 6.0 hours extra
             Console.WriteLine(@"Datetime from timestamp: {0}", dateTime.AddHours(6.0));
         }
     }
