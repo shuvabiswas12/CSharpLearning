@@ -12,6 +12,8 @@ namespace CSharpLearning
         {
             this.Arrays();
             this.Strings();
+            this.GetFirstAndLastName();
+            this.GetPriceAndCurrency();
         }
 
         void Arrays()
@@ -75,6 +77,24 @@ namespace CSharpLearning
             var text_v2 = @"This is a dummy text.
 Demo path is: C:\Localhost:3000";
             Console.WriteLine(text_v2);
+        }
+
+        void GetFirstAndLastName()
+        {
+            var fullName = "Mosh Hamidane";
+            var findSpace = fullName.IndexOf(" ");
+            var firstName = fullName.Substring(0, findSpace);
+            var lastName = fullName.Substring(findSpace);
+            Console.WriteLine("FirstName = {0} and LastName = {1}", firstName, lastName);
+        }
+
+        void GetPriceAndCurrency()
+        {
+            var price = 12;
+            var actualPrice = price.ToString("C");
+            Console.WriteLine("Price: {0}", actualPrice);
+
+            Console.WriteLine("Another Price: {0}", Convert.ToInt32("1200").ToString("C0"));
         }
     }
 }
