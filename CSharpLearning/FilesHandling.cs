@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace CSharpLearning
 {
@@ -66,14 +68,21 @@ namespace CSharpLearning
         {
             PcUsername = GetPcUsername();
             GetCurrentDirectory();
+
             CreateDirectory();
             DeleteDirectory();
             CopyDirectory();
-            MoveDirectory();
+            
 
             CreateFile();
             MoveFile();
             CopyFile();
+            DeleteFile();
+
+            MoveDirectory();
+
+            RenameFile();
+            ResizeAnImage();
         }
 
 
@@ -121,6 +130,23 @@ namespace CSharpLearning
 
         static void MoveDirectory()
         {
+            var sourceDirName = String.Format(@"C:\Users\{0}\Desktop\Dir_1", PcUsername);
+            var destDirName = String.Format(@"C:\Users\{0}\Desktop\Dir_2\Dir_1", PcUsername);
+
+            if (Directory.Exists(sourceDirName))
+            {
+                if (Directory.Exists(destDirName))
+                {
+                    Directory.Delete(destDirName, true);
+                }
+
+                Directory.Move(sourceDirName, destDirName);
+                Console.WriteLine("Moving complete.");
+            }
+            else
+            {
+                Console.WriteLine("Can not find directory.");
+            }
 
         }
 
@@ -182,40 +208,56 @@ namespace CSharpLearning
             {
                 Console.WriteLine("Copying failed.");
             }
-            
-
         }
 
         static void DeleteFile()
         {
-
-        }
-
-        static void GetFilePath()
-        {
-
+            var path = String.Format(@"C:\Users\{0}\Desktop\DummyFile.txt", PcUsername);
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                Console.WriteLine("Complete deletion.");
+            }
+            else
+            {
+                Console.WriteLine("File not found to delete.");
+            }
         }
 
         static void RenameFile()
         {
+            var path = CreateFile("MyFile2.txt");
+            var fileName = Path.GetFileName(path);
+            var fileExtension = Path.GetExtension(path);
+            var newName = String.Format(@"C:\Users\{0}\Desktop\{1}", PcUsername, "MyDummyFile.txt");
 
-        }
+            // renaming 
+            File.Move(path, newName, true);
 
-        static void GetFileExtenstion()
-        {
+            Console.WriteLine("Renaming done.");
 
+            Console.WriteLine(@"FileName : {0} \nFileExtension: {1}", fileName, fileExtension);
         }
 
         static void ResizeAnImage()
         {
+            var imagePath = String.Format(@"{0}\Images\photo-1.jpg", GetCurrentDirectory());
+            var image = Image.FromFile(imagePath);
+            var newPath = String.Format(@"{0}\Images\Resize\myPhoto.jpg", GetCurrentDirectory());
 
+            // create resize folder if not present
+            var newResizeDir = String.Format(@"{0}\Images\Resize", GetCurrentDirectory());
+            if (!Directory.Exists(newResizeDir))
+            {
+                Directory.CreateDirectory(newResizeDir);
+            }
+
+            // resizing
+            new Bitmap(image, 120, 120).Save(newPath, format: ImageFormat.Jpeg);
+
+            Console.WriteLine("Resizing done.");
+
+            Console.WriteLine(@"Image width: {0} Image height: {1}", image.Width, image.Height);
         }
-
-        static void GetImagesOrFilesMetaData()
-        {
-
-        }
-
-
     }
 }
