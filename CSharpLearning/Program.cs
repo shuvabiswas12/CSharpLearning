@@ -55,6 +55,10 @@ namespace CSharpLearning
 
             var refKeyword = new RefKeyword();
 
+            var indexers = new Indexers();
+            indexers["Name"] = "Mosh Hamedani";
+            Console.WriteLine("\n Indexers value = {0}", indexers["Name"]);
+
             Console.ReadLine();
 
         }
