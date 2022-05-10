@@ -55,9 +55,25 @@ namespace CSharpLearning
 
             var refKeyword = new RefKeyword();
 
+            // Indexers example...
             var indexers = new Indexers();
             indexers["Name"] = "Mosh Hamedani";
             Console.WriteLine("\n Indexers value = {0}", indexers["Name"]);
+
+            // Indexers example end.
+
+
+            // OopClass_1
+            var customer = new Customer(101, "Paulo Deshone");
+            customer.Orders.Add(new Order("Iphone 13 Pro max", 1001, 1200.00));
+            customer.Orders.Add(new Order("Xiaomi breared trimmer", 1341, 200.00));
+
+            customer.OrderDetail();
+
+
+            // properties...
+            var properties = new CSharpProperties();
+
 
             Console.ReadLine();
 
