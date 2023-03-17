@@ -47,7 +47,7 @@ namespace CSharpLearning
         {
             /*
              * strings basically an array of chars.
-             * we can access each chars using inidexs like array.
+             * we can access each chars using indexes like array.
              */
             var name = "Mosh Hamidane";
             Console.WriteLine(name);

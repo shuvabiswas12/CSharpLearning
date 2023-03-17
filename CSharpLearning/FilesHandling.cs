@@ -17,8 +17,8 @@ namespace CSharpLearning
              * System.IO namespace
              * -------------------------
              * 
-             * File, FileInfo => provding methods for creating creating, copying, 
-             *                   moving, opening and deleteing of files. There are a simple difference between File and FileInfo.
+             * File, FileInfo => providing methods for creating, copying, 
+             *                   moving, opening and deleting of files. There are a simple difference between File and FileInfo.
              *                   File provides static methods whereas FileInfo provides instance methods.
              *                   
              *                   methods are :=>

@@ -39,7 +39,7 @@ namespace CSharpLearning
             this.firstChar = firstChar;
         }
 
-        public void getAllVariables()
+        public void GetAllVariables()
         {
             Console.WriteLine("FullName = " + this.FullName);
             Console.WriteLine("Id = " + this.Id);
@@ -50,9 +50,9 @@ namespace CSharpLearning
             Console.WriteLine("FirstChar = " + this.firstChar);
 
             // const variable
-            const float TotalEarnings = 900.0f;
+            const float totalEarnings = 900.0f;
 
-            Console.WriteLine("Contant Variable's Value = " + TotalEarnings);
+            Console.WriteLine("Constant Variable's Value = " + totalEarnings);
 
             // var is a another type of variable
             var varVariable = 100;

@@ -19,15 +19,15 @@ namespace CSharpLearning
             Console.WriteLine("CSharp Learning\n");
 
             var variables = new Variables(id: 101, fullName: "Mosh Hamidane", 1200, 900, 10000, false, 'A');
-            variables.getAllVariables();
+            variables.GetAllVariables();
 
-            /**
-             * Formatted string
-             * ----------------
-             * 
-             * {0} represent first parameter after formatted string
-             * {1} represent second parameter after formatted string
-             */
+            // /**
+            //  * Formatted string
+            //  * ----------------
+            //  * 
+            //  * {0} represent first parameter after formatted string
+            //  * {1} represent second parameter after formatted string
+            //  */
 
             Console.WriteLine("Min Value of byte = {0}, Max value of byte = {1}", byte.MinValue, byte.MaxValue);
 

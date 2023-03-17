@@ -59,6 +59,13 @@ Express: {2}",
         {
             var methodName = "Express";
             var parsedMethod = (ShippingAddress) Enum.Parse(typeof(ShippingAddress), methodName);
+            
+            // this returns number of that enums types property
+            Console.Write((int) parsedMethod); 
+
+            // this returns name only
+            Console.Write(parsedMethod);
+
             Console.WriteLine("Parsed Done.");
         }
     }
