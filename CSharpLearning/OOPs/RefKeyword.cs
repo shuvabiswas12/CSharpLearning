@@ -21,7 +21,5 @@ namespace CSharpLearning.OOPs
             value++;
             Console.WriteLine("\n From Add method the Value = {0}", value);
         }
-
-        
     }
 }

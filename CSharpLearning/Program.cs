@@ -13,7 +13,6 @@ namespace CSharpLearning
          * To run the solution press 'Ctrl + F5'
          * 
          */
-
         static void Main(string[] args)
         {
             Console.WriteLine("CSharp Learning\n");
@@ -76,7 +75,6 @@ namespace CSharpLearning
 
 
             Console.ReadLine();
-
         }
     }
 }

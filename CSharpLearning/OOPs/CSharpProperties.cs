@@ -9,7 +9,7 @@ namespace CSharpLearning.OOPs
     class CSharpProperties
     {
         // This class shows properties in CSharp
-        // Properties means gettter and setter which is get and set
+        // Properties means getter and setter which is get and set
 
         /*
          * Rules is If get and set auto implemented then fields put after constructor.
@@ -31,7 +31,8 @@ namespace CSharpLearning.OOPs
 
         public int Age
         {
-            get {
+            get
+            {
                 var timespan = DateTime.Now - Birthdate;
                 var years = timespan.Days / 365;
                 return years;
@@ -42,8 +43,5 @@ namespace CSharpLearning.OOPs
         {
             Console.WriteLine("\n Name = {0} and Age = {1}", this.Name, this.Age);
         }
-
-
     }
-
 }

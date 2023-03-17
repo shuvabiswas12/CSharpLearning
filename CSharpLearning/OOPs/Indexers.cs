@@ -8,7 +8,6 @@ namespace CSharpLearning.OOPs
 {
     class Indexers
     {
-
         /*
          * Indexers use in setUp cookie. This is an example of indexers.
          */
@@ -27,11 +26,10 @@ namespace CSharpLearning.OOPs
          */
         public String this[string key]
         {
-            get { return this._dictionary[key];  }
+            get { return this._dictionary[key]; }
 
-            // Here 'value' is a value which is in rightside of the assignment operator
+            // Here 'value' is a value which is in right side of the assignment operator
             set { this._dictionary[key] = value; }
         }
-
     }
 }
