@@ -74,6 +74,15 @@ namespace CSharpLearning
             var properties = new CSharpProperties();
 
 
+            // struct ...
+            var structBook = new Book();
+            structBook.Name = "100 monishider kotha!";
+            structBook.Year = 2005;
+            structBook.Author = "Mykhel H Heart";
+            structBook.Price = 400;
+            Console.WriteLine(structBook);
+
+
             Console.ReadLine();
         }
     }
