@@ -54,9 +54,15 @@ namespace CSharpLearning
 
             Console.WriteLine("Constant Variable's Value = " + totalEarnings);
 
-            // var is a another type of variable
+            // var is a another type of variable  ---> compile time check
             var varVariable = 100;
+            // varVariable = "Happy!";  // Gives error  
             Console.WriteLine("Var Variable's Value = " + varVariable);
+            
+            // Dynamic type --> runtime check
+            dynamic a = 10;
+            a = "Happy!";  // no error
+            Console.WriteLine(a);
         }
     }
 }
