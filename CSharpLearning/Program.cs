@@ -1,5 +1,6 @@
 ﻿using CSharpLearning.OOPs;
 using System;
+using CSharpLearning.OOPs.ExtensionMethod;
 using CSharpLearning.OOPs.Inheritence;
 
 namespace CSharpLearning
@@ -106,8 +107,13 @@ namespace CSharpLearning
             var age2 = "20";
             int age3 = Convert.ToInt32(age2);
             Console.WriteLine(age3);
+
             
-            
+            // Extension method...
+            var name = "Mosh Hamidane";
+            Console.WriteLine(name.RightSubString(4));
+
+
             // Try catch finally block...
             try
             {
@@ -138,7 +144,10 @@ namespace CSharpLearning
             {
                 Console.WriteLine("Try block without catch block executed.");
             }
-
+            
+            
+            
+            
             Console.ReadLine();
         }
     }
