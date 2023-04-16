@@ -1,5 +1,6 @@
 ﻿using CSharpLearning.OOPs;
 using System;
+using CSharpLearning.OOPs.Inheritence;
 
 namespace CSharpLearning
 {
@@ -86,6 +87,57 @@ namespace CSharpLearning
             // Static class
             
             Console.WriteLine(StaticClassDemo.Role);
+            
+            
+            // Inheritance...
+            var hondaCivic = new Car("Honda Civic", "2020");
+            hondaCivic.ShowDetails();
+            
+            // is keyword
+            var age = 10;
+            bool checkAge = age is int;  // is keyword checks type and returns true or false. 
+            Console.WriteLine($"Age is int : {checkAge}");
+            
+            
+            // as keyword -> convert or casting one types to another
+            // var one = '1'; WriteLine(one as int);
+            
+            // Casting...
+            var age2 = "20";
+            int age3 = Convert.ToInt32(age2);
+            Console.WriteLine(age3);
+            
+            
+            // Try catch finally block...
+            try
+            {
+                var age4 = "20";
+                int age5 = Convert.ToInt32(age4);
+                Console.WriteLine(age5);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            // you can write here multiple catch block
+            finally
+            {
+                Console.WriteLine("Finally block executed.");
+            }
+            
+            
+            // try block without catch block...
+            // in this case, must have to write finally block after try block. 
+            try
+            {
+                var num = 5;
+                if (num == 5) return;
+
+            }
+            finally
+            {
+                Console.WriteLine("Try block without catch block executed.");
+            }
 
             Console.ReadLine();
         }
