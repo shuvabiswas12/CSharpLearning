@@ -37,6 +37,11 @@ namespace CSharpLearning.OOPs
                 var years = timespan.Days / 365;
                 return years;
             }
+
+            set
+            {
+                Age = value;
+            }
         }
 
         public void ShowNameAndAge()
