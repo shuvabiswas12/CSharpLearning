@@ -81,7 +81,11 @@ namespace CSharpLearning
             structBook.Author = "Mykhel H Heart";
             structBook.Price = 400;
             Console.WriteLine(structBook);
-
+            
+            
+            // Static class
+            
+            Console.WriteLine(StaticClassDemo.Role);
 
             Console.ReadLine();
         }
