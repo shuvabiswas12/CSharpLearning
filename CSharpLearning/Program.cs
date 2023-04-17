@@ -1,8 +1,10 @@
 ﻿using CSharpLearning.OOPs;
 using System;
+using CSharpLearning.OOPs.Delegates;
 using CSharpLearning.OOPs.ExtensionMethod;
 using CSharpLearning.OOPs.Generics;
 using CSharpLearning.OOPs.Inheritence;
+using Calculator = CSharpLearning.OOPs.Generics.Calculator;
 
 namespace CSharpLearning
 {
@@ -44,8 +46,9 @@ namespace CSharpLearning
             var arrayAndArrayList = new ArrayAndArraylist();
 
             var dateTime = new DateAndTimes();
-
-            var fileHandlig = new FilesHandling();
+            
+            // File Handling...
+            // var fileHandling = new FilesHandling();
 
 
             // OOPs started
@@ -129,6 +132,9 @@ namespace CSharpLearning
             
             // Exception Handling.
             ExceptionHandling.HandleMyException();
+            
+            // delegates
+            UseDelegate.Run();
 
 
             Console.ReadLine();
