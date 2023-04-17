@@ -135,6 +135,10 @@ namespace CSharpLearning
             
             // delegates
             UseDelegate.Run();
+            
+            
+            // lambda function
+            LambdaExpression.Run();
 
 
             Console.ReadLine();
