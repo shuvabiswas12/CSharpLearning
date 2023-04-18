@@ -4,6 +4,8 @@ using CSharpLearning.OOPs.Delegates;
 using CSharpLearning.OOPs.ExtensionMethod;
 using CSharpLearning.OOPs.Generics;
 using CSharpLearning.OOPs.Inheritence;
+using CSharpLearning.OOPs.LINQ_demo;
+using Book = CSharpLearning.OOPs.Book;
 using Calculator = CSharpLearning.OOPs.Generics.Calculator;
 
 namespace CSharpLearning
@@ -139,6 +141,10 @@ namespace CSharpLearning
             
             // lambda function
             LambdaExpression.Run();
+            
+            
+            // LINQ 
+            LinqDemo.Run();
 
 
             Console.ReadLine();
