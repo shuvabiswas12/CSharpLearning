@@ -18,8 +18,8 @@ class BookRepository
         {
             new Book() { Text = "C#", Price = 90 },
             new Book() { Text = "Java", Price = 60 },
-            new Book() { Text = "C++", Price = 80 },
-            new Book() { Text = "Python", Price = 40 },
+            new Book() { Text = "C++", Price = 90 },
+            new Book() { Text = "Python", Price = 60 },
             new Book() { Text = "PHP", Price = 50 },
             new Book() { Text = "Rust", Price = 100 },
         };
@@ -28,6 +28,38 @@ class BookRepository
 
 public class LinqDemo
 {
+    private List<int> _numbers = new List<int> { 10, 11, 12, 13, 16, 18, 20, 21 };
+
+    // Getting even numbers using query based syntax
+    public void ShowEvenNumbers()
+    {
+        // Query based syntax
+        var evenNumbers = from number in _numbers where number % 2 == 0 select number;
+        Console.WriteLine(string.Join(",", evenNumbers));
+    }
+
+    // Getting odd numbers using method based syntax
+    public void ShowOddNumbers()
+    {
+        // Method based syntax
+        var oddNumbers = _numbers.Where(number => number % 2 != 0).Select(number => number).ToList();
+        Console.WriteLine(string.Join(",", oddNumbers));
+    }
+
+    public void GetBooks_GroupBy()
+    {
+        // Group by 
+        var booksGroupBy = new BookRepository().GetBooks().GroupBy(book => book.Price);
+        foreach(var booksGroup in booksGroupBy)
+        {
+            Console.WriteLine(booksGroup.Key);
+            foreach(var book in booksGroup)
+            {
+                Console.WriteLine($"Book(Text = '{book.Text}' Price = {book.Price})");
+            }
+        }
+    }
+
     public static void Run()
     {
         var bookRepository = new BookRepository();

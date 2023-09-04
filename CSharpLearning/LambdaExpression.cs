@@ -17,6 +17,17 @@ public class LambdaExpression
         Func<int, int, int> Add = (num1, num2) => num1 + num2;
         Console.WriteLine(Add(5, 6));
 
+        // This is another way to define lamba expression.
+        /**
+         * C# compiler automatically converts this expression given bellow into a delegates expression like upper expression.
+         * Func<int, int, int> Subtract = (num1, num2) => num1 - num2
+         * 
+         * This is happen when c# compiler see its a lambda expression.
+         */
+        var Subtract = (int num1, int num2) => num1 - num2;
+        // You can specify the return type in this.
+        // var Subtract = int (int num1, int num2) => num1 - num2;
+
 
     }
 }

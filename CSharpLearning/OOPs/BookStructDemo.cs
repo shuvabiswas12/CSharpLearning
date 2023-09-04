@@ -9,7 +9,7 @@ namespace CSharpLearning.OOPs
     // set its member values, and print the values.
 
 
-    public struct Book
+    public struct BookStructDemo
     {
         public string Name;
         public string Author;

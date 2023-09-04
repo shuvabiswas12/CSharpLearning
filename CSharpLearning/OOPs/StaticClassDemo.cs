@@ -8,6 +8,10 @@ public static class StaticClassDemo
     public static string Role { get; set; }
     
     // Static constructor does not have access modifier.
+    // Static constructor does not have any parameter
+    // Static constructor does not access 'this' keyword
+    // Use Static constructor to initialize static members
+    // Use Static class when declare Utility class
     static StaticClassDemo()
     {
         Role = "User";

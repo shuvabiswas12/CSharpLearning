@@ -5,7 +5,7 @@ using CSharpLearning.OOPs.ExtensionMethod;
 using CSharpLearning.OOPs.Generics;
 using CSharpLearning.OOPs.Inheritence;
 using CSharpLearning.OOPs.LINQ_demo;
-using Book = CSharpLearning.OOPs.Book;
+using Book = CSharpLearning.OOPs.BookStructDemo;
 using Calculator = CSharpLearning.OOPs.Generics.Calculator;
 
 namespace CSharpLearning
@@ -141,15 +141,24 @@ namespace CSharpLearning
             
             // lambda function
             LambdaExpression.Run();
-            
-            
-            // LINQ 
+
+
+            // LINQ..................
+            var linqDemo = new LinqDemo();
+            linqDemo.ShowEvenNumbers();
+            linqDemo.ShowOddNumbers();
+            linqDemo.GetBooks_GroupBy();
             // LinqDemo.Run();
+
+
+            // init keyword instead of set keyword
+            var initKey = new InItKeywordDemo() { FullName = "Init Demo", age = 20 };
+
             
             // Yield
             
             Yield.Run();
-            
+
             Console.ReadLine();
         }
     }
