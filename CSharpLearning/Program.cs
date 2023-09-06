@@ -7,6 +7,7 @@ using CSharpLearning.OOPs.Inheritence;
 using CSharpLearning.OOPs.LINQ_demo;
 using Book = CSharpLearning.OOPs.BookStructDemo;
 using Calculator = CSharpLearning.OOPs.Generics.Calculator;
+using CSharpLearning.Concurrency;
 
 namespace CSharpLearning
 {
@@ -158,6 +159,14 @@ namespace CSharpLearning
             // Yield
             
             Yield.Run();
+
+
+            // Concurrency
+            var threadDemo = new ThreadDemo();
+            threadDemo.Run();
+            var anotherTread = new CheckHttpUrl();
+            anotherTread.Run();
+
 
             Console.ReadLine();
         }
