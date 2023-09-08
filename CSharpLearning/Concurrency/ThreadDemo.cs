@@ -13,7 +13,9 @@ namespace CSharpLearning.Concurrency
     {
         // Use the Thread class to create a new thread.
         // Call the Start() method to start executing the thread.
-        // Call the Join() method to wait for the thread to complete.
+        // Call the Join() method to wait for the thread to complete. 
+
+        // set thread object's foreground to background by "<thread's obj>.IsBackground = true"
 
         public void DoWork()
         {
@@ -69,6 +71,11 @@ namespace CSharpLearning.Concurrency
             // passing args by threads
             // another multi-threading example
             var t3 = new Thread(SendEmail);
+            
+            // If you want to set a thread to background from foreground.
+            // Background thread will be terminated after the main thread termination.
+            t3.IsBackground = true;
+
             /** 
              * Can pass a anonymous functions as well like following...
              *** Use lambda expressions to pass arguments to threads...
