@@ -167,10 +167,6 @@ namespace CSharpLearning
             var anotherTread = new CheckHttpUrl();
             anotherTread.Run();
 
-            // Abstract class
-
-            var abstractClass = new AbstractClassDemo();
-
 
             Console.ReadLine();
         }
