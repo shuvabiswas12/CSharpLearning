@@ -11,6 +11,9 @@ namespace CSharpLearning.OOPs.Interfaces
      * Default implementation in the interface.
      * Explicit implementation on the inheritted class.
      */
+
+    // Interface is a contruct or a pure contract.
+    // Is-a relationship means it is Interface. Meaning, parent and child relationship.
     interface IAnimal
     {
         // interface can not contain instance variable
